@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,39 +12,15 @@
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void ft_bzero(void *s, size_t n)
 {
-	unsigned char *i;
-
-	i = (unsigned char *)s;
-	while (n && i)
-	{
-		*i = c;
-		i++;
-		n--;
-	}
-	return (s);
-}
-/*
-void *ft_memset(void *s, int c, size_t n)
-{
-	size_t i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = (unsigned char)c;
-	 	i++;	 
-	}
-	return (s);
+	ft_memset(s, '\0', n);
 }
 
 int main(void)
 {
-	char str[] = "www.Cualquiercosa.com";
+	char str[] = "Holaquehaces";
 
-	printf("Bfor memset: %s\n", (char *)ft_memset(str, ' ', 0));
-	printf("Aftr memset: %s\n", (char *)ft_memset(str, '.', 4));
+	printf("The result is: %s", (char *)ft_bzero(str, 2)); 
 	return (0);
 }
-*/

@@ -10,41 +10,4 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
-{
-	unsigned char *i;
-
-	i = (unsigned char *)s;
-	while (n && i)
-	{
-		*i = c;
-		i++;
-		n--;
-	}
-	return (s);
-}
-/*
-void *ft_memset(void *s, int c, size_t n)
-{
-	size_t i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = (unsigned char)c;
-	 	i++;	 
-	}
-	return (s);
-}
-
-int main(void)
-{
-	char str[] = "www.Cualquiercosa.com";
-
-	printf("Bfor memset: %s\n", (char *)ft_memset(str, ' ', 0));
-	printf("Aftr memset: %s\n", (char *)ft_memset(str, '.', 4));
-	return (0);
-}
-*/
