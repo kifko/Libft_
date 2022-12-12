@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:36:54 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/08 18:27:14 by festeve-         ###   ########.fr       */
+/*   Created: 2022/12/08 16:19:02 by festeve-          #+#    #+#             */
+/*   Updated: 2022/12/08 18:06:56 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	char	*ptr;
-	char	needle;
-	int		i;
+	unsigned int	i;
+	unsigned int	dstlen;
+	unsigned int	srclen;
 
-	ptr = (char *)s;
-	needle = c;
 	i = 0;
-	while (ptr[i] != '\0')
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (dstsize == 0)
+		return (srclen);
+	if (dstsize == dstlen)
+		return (srclen + dstsize);
+	while (src[i] != '\0' && (dstlen + i) < dstsize - 1)
 	{
-		if (ptr[i] == c)
-			return (ptr + i);
+		dst[dstlen + i] = src[i];
 		i++;
 	}
-	if (ptr[i] == c)
-		return (ptr + i);
-	return (NULL);
+	dst[dstlen + i] = '\0';
+	return (dstlen + srclen);
 }

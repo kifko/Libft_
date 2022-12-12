@@ -6,15 +6,15 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 14:15:26 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/01 17:55:44 by festeve-         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:51:33 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *i;
+	unsigned char	*i;
 
 	i = (unsigned char *)s;
 	while (n && i)

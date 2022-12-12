@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:36:54 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/08 18:27:14 by festeve-         ###   ########.fr       */
+/*   Created: 2022/12/08 15:22:13 by festeve-          #+#    #+#             */
+/*   Updated: 2022/12/12 15:23:35 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*ptr;
-	char	needle;
-	int		i;
+	unsigned char	*ptr;
+	unsigned char	needle;
+	unsigned int	i;
 
-	ptr = (char *)s;
+	ptr = (unsigned char *)s;
 	needle = c;
 	i = 0;
-	while (ptr[i] != '\0')
+	while (i < n)
 	{
-		if (ptr[i] == c)
-			return (ptr + i);
+		if (ptr[i] == needle)
+			return (&ptr[i]);
 		i++;
 	}
-	if (ptr[i] == c)
-		return (ptr + i);
 	return (NULL);
 }

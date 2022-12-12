@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:53:32 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/01 12:24:36 by festeve-         ###   ########.fr       */
+/*   Updated: 2022/12/09 15:04:05 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 126)
-		return(1);
-	return(0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
-
+/*
 int	main()
 {
 	int i;
@@ -26,3 +26,4 @@ int	main()
 	i =  'j';
 	printf("%d", ft_isascii(i));
 }
+*/

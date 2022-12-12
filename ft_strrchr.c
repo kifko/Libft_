@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:36:54 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/08 18:27:14 by festeve-         ###   ########.fr       */
+/*   Created: 2022/12/08 16:45:44 by festeve-          #+#    #+#             */
+/*   Updated: 2022/12/08 18:10:15 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptr;
 	char	needle;
@@ -20,14 +20,14 @@ char	*ft_strchr(const char *s, int c)
 
 	ptr = (char *)s;
 	needle = c;
-	i = 0;
-	while (ptr[i] != '\0')
+	i = ft_strlen(s);
+	if (ptr[i] == needle)
+		return (&ptr[i]);
+	while (i != 0)
 	{
-		if (ptr[i] == c)
-			return (ptr + i);
-		i++;
+		if ((ptr[i - 1]) == needle)
+			return (&ptr[i -1]);
+		i--;
 	}
-	if (ptr[i] == c)
-		return (ptr + i);
 	return (NULL);
 }

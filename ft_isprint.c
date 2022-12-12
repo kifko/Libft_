@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:27:27 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/01 12:45:56 by festeve-         ###   ########.fr       */
+/*   Updated: 2022/12/12 12:51:11 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 127)
-		return(1);
-	return(0);
+	return (c >= 32 && c <= 126);
 }
-
+/*
 int	main()
 {
 	int	i;
@@ -26,3 +24,4 @@ int	main()
 	i = '&';
 	printf("%d", ft_isprint(i));
 }
+*/
