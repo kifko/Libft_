@@ -6,40 +6,62 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 12:32:54 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/12 13:45:33 by festeve-         ###   ########.fr       */
+/*   Updated: 2022/12/16 13:25:34 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	The strlcpy() and strlcat() functions copy and concatenate strings with the same input parameters and output result as snprintf(3).  
+	They are designed to be safer, more consistent, and less error prone replacements for the easily misused functions strncpy(3) and strncat(3).
+
+    strlcpy() and strlcat() take the full size of the destination buffer and guarantee NUL-termination if there is room.  Note that room for the NUL should be included in dstsize.
+
+    strlcpy() copies up to dstsize - 1 characters from the string src to dst, NUL-terminating the result if dstsize is not 0.
+
+    If the src and dst strings overlap, the behavior is undefined.
+*/
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char *d;
-	char *l;
-	const char *s;
+	size_t srcsize;
+	size_t i;
 
-	d = dst;
-	l = dst + dstsize;
-	s = src;
-	while (*s != '\0' && d < l)
+	srcsize = ft_strlen(src);
+	i = 0;
+	if (!dst || !src)
+		return (0);
+	if (dstsize != 0)
 	{
-		*d++ = *s++;
+		while (src[i] != '\0' && i < (dstsize -1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	if (d < l)
-	{
-		*d = 0;
-	}
-	else if ( dstsize > 0)
-	{
-		d[-1] = 0;
-	}
-	while (*s != '\0')
-	{
-		s++;
-	}
-	return (s - src);
+	return (srcsize);
 }
+
 /*
+size_t	ft_strlcpy(char *dst, const char *src, size_t len)
+{
+	size_t src_len = ft_strlen(src);
+	size_t i = 0;
+
+	while (i < src_len && i < len - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	if (i < len)
+	{
+		dst[i] = '\0';
+	}
+	return (src_len);
+}
+
 void test(int size)
 {
 	char string[] = "Hello there, Moon";
