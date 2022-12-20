@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:45:44 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/08 18:10:15 by festeve-         ###   ########.fr       */
+/*   Updated: 2022/12/19 14:17:34 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptr;
 	char	needle;
-	int		i;
+	size_t	i;
 
 	ptr = (char *)s;
 	needle = c;
@@ -30,4 +30,21 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 	}
 	return (NULL);
+}
+
+int	main (void)
+{
+	const char *str = "Hello, World!";
+	int c = 'l';
+
+	char *result = ft_strrchr(str, c);
+	if (result)
+	{
+		printf ("La última ocurrencia de '%c' en '%s' se encuentra en la posición %ld\n", c, str, result - str); 
+	}
+	else
+	{
+		printf("No se ha encontrado ninguna ocurrencia de '%c' en '%s'\n", c, str);
+	}
+	return (0);
 }

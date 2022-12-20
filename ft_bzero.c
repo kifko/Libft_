@@ -14,14 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, '\0', n);
-}
-/*
-int	main()
-{
-	char str[] = "Holaquehaces";
+	unsigned char *i;
 
-	printf("The result is: %s", ft_bzero(str, 2)); 
-	return (0);
+	i = s;
+	while (n-- > 0)
+			i[n] = '\0';
 }
-*/

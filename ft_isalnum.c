@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:43:48 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/09 14:43:21 by festeve-         ###   ########.fr       */
+/*   Updated: 2022/12/19 21:14:56 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main()
-{
-	int i;
-
-	i = '9';
-	printf("%d", ft_isalnum(i));
-}
-*/

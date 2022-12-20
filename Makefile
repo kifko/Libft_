@@ -6,7 +6,7 @@
 #    By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 17:21:54 by festeve-          #+#    #+#              #
-#    Updated: 2022/12/15 11:12:55 by festeve-         ###   ########.fr        #
+#    Updated: 2022/12/19 13:05:14 by festeve-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ clean:
 
 fclean:  clean
 	     $(RM)  $(NAME)
-	     echo "All removed!"
+	     echo "fclean done, all removed!"
 
 re:      fclean $(NAME)
 

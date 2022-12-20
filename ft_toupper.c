@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 12:41:23 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/07 22:52:06 by festeve-         ###   ########.fr       */
+/*   Updated: 2022/12/19 19:15:17 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-/*
-int	main()
-{
-	int i;
-
-	i = 'h';
-	printf("%c", ft_toupper(i));
-}
-*/
