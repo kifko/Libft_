@@ -96,9 +96,7 @@ int main (void)
 		printf("It wasnt found the character '%c' at string '%s'\n", ch, str4);
 	}
 
-
-
-
+	printf("<<<__\033[36mft_strrchr\033[0m__>>> ");
 
 	return (0);
 }

@@ -18,3 +18,10 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
+
+int	main(void)
+{
+	printf("<<<__\033[36mft_toupper\033[0m__>>> ");
+	printf("\u2714 The result is: %c\n", ft_toupper('e'));
+	return (0);
+}
