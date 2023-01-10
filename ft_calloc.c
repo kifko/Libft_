@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 12:41:23 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/19 19:15:17 by festeve-         ###   ########.fr       */
+/*   Created: 2022/12/08 16:36:54 by festeve-          #+#    #+#             */
+/*   Updated: 2022/12/16 14:20:05 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	void *ptr;
+	ptr = malloc(nmemb * size);
+	if(ptr == NULL)
+	{
+		return (NULL);
+	}
+	ft_memset(ptr, 0, nmemb * size);
+	return (ptr);
 }

@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
+/*
 int	main (void)
 {
 	const char *str = "Hello, World!";
@@ -48,3 +48,4 @@ int	main (void)
 	}
 	return (0);
 }
+*/

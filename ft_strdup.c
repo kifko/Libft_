@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 12:41:23 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/19 19:15:17 by festeve-         ###   ########.fr       */
+/*   Created: 2022/12/08 16:36:54 by festeve-          #+#    #+#             */
+/*   Updated: 2022/12/16 14:20:05 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char *ft_strdup(const char *s)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	size_t len;
+	char *dup;
+
+	len = ft_strlen(s) + 1;
+	dup = malloc(len);
+
+	if(dup == NULL)
+	{
+		return NULL;
+	}
+	return (ft_memcpy(dup, s, len));
+	return (0);
 }

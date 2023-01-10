@@ -33,6 +33,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strdup(const char *s);
 
 // ft_to
 int	ft_toupper(int c);
@@ -46,5 +47,10 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
+
+// Adicionales
+char	*ft_substr(const char *s, size_t start, size_t len);
+
 
 #endif
