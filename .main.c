@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:01:01 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/10 12:29:09 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/11 18:25:30 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,57 @@
 
 int main (void)
 {
+	/* ft_isalpha */
+
 	printf("<<<__\033[36mft_isalpha\033[0m__>>> ");
-	printf("\u2705 It´s a abecedary (not alphabeth)! %d\n", ft_isalpha('a'));	
-	
+	printf("\u2705 It´s a abecedary (not alphabeth)! %d\n", ft_isalpha('a'));
+
+	/* ft_isdigit */
+
 	printf("<<<__\033[36mft_isdigit\033[0m__>>> ");
 	printf("\u2705 Its digit! %d\n", ft_isdigit('4'));
+
+	/* ft_isalnum */
 
 	printf("<<<__\033[36mft_isalnum\033[0m__>>> ");
 	printf("\u2705 Its alphanumeric! %d\n", ft_isalnum('h'));
 
+	/* ft_isascii */
+
 	printf("<<<__\033[36mft_isascii\033[0m__>>> ");
 	printf("\u2705 Its ascii! %d\n", ft_isascii('f'));
+
+	/* ft_isprint */
 
 	printf("<<<__\033[36mft_isprint\033[0m__>>> ");
 	printf("\u2705 Its printable! %d\n", ft_isprint('j'));
 
+	/* ft_strlen */
+
 	printf("<<<__\033[36mft_strlen\033[0m___>>> ");
 	printf("\u2705 \033[35mThe lenght of the string is:\033[0m %zu\n", ft_strlen("abcdefgh"));
+
+	/* ft_memset */
 
 	printf("<<<__\033[36mft_memset\033[0m___>>> ");
 	char str1[84] = "ahoraquevamosdespacio";
 	printf("\u2705 The result is: %p\n", ft_memset(str1, '.', 8));
+
+	/* ft_bzero */
 
 	printf("<<<__\033[36mft_bzero\033[0m____>>> ");
 	char str2[80] = "vamosacontarmentiras";
 	ft_bzero(str2, 2);
 	printf("\u2705 The result is: %s\n", str2);
 
+	/* ft_memcpy */
+
 	printf("<<<__\033[36mft_memcpy\033[0m___>>> ");
 	char src[] = "tralara";
 	char dst[20];
 	printf("\u2705 The result is: %p\n", ft_memcpy(dst, src, 3));
+
+	/* ft_memmove */
 
 	printf("<<<__\033[36mft_memmove\033[0m__>>> ");
 	char str3[] = "vamosacontarmentiras";
@@ -59,6 +79,8 @@ int main (void)
 	printf("\u2705 And it is located at: %p\n", dst1);
 
 
+	/* ft_strlcpy */
+
 	printf("<<<__\033[36mft_strlcpy\033[0m__>>> ");
 	char src1[] = "tralara";
 	char dst2[8];
@@ -67,6 +89,8 @@ int main (void)
 	printf("\u2705 Its been copied %zu characters from source string to destiny string. \n", cpy);
 	printf("<<<__\033[36mft_strlcpy\033[0m__>>> ");
 	printf("\u2705 Destiny string is: %s\n", dst2);
+
+	/* ft_strlcat */
 
 	printf("<<<__\033[36mft_strlcat\033[0m__>>> ");
 	char src2[] = " contar mentiras";
@@ -77,11 +101,17 @@ int main (void)
 	printf("<<<__\033[36mft_strlcat\033[0m__>>> ");
 	printf("\u2705 Destiny string is: %s\n", dst3);
 
+	/* ft_toupper */
+
 	printf("<<<__\033[36mft_toupper\033[0m__>>> ");
 	printf("\u2705 The result is: %c\n", ft_toupper('e'));
 
+	/* ft_tolower */
+
 	printf("<<<__\033[36mft_tolower\033[0m__>>> ");
 	printf("\u2705 The result is: %c\n", ft_tolower('E'));
+
+	/* ft_strchr */
 
 	printf("<<<__\033[36mft_strchr\033[0m___>>> ");
 	char str4[] = "porelmar";
@@ -96,6 +126,8 @@ int main (void)
 		printf("It wasnt found the character '%c' at string '%s'\n", ch, str4);
 	}
 
+	/* ft_strrchr */
+
 	printf("<<<__\033[36mft_strrchr\033[0m__>>> ");
 	char str5[] = "correnlasliebres";
 	char ch2 = 'e';
@@ -108,6 +140,8 @@ int main (void)
 	{
 		printf("It wasnt found the character '%c' at string '%s'\n", ch2, str5);
 	}
+
+	/* ft_strncmp */
 
 	printf("<<<__\033[36mft_strncmp\033[0m__>>> ");
 	char str6[] = "Hola";
@@ -134,6 +168,8 @@ int main (void)
 		printf("\u274c Strings str6 and str8 are different\n");
 	}
 
+	/* ft_calloc */
+
 	printf("<<<__\033[36mft_calloc\033[0m___>>> ");
 	int n3 = 10;
 	int *array = ft_calloc(n3, sizeof(int));
@@ -144,6 +180,8 @@ int main (void)
 	}
 	printf("thisisacallocoverwritentext\n");
 	free(array);
+
+	/* ft_strdup */
 
 	printf("<<<__\033[36mft_strdup\033[0m___>>> ");
 	const char *original = "Hello, world!";
@@ -161,11 +199,20 @@ int main (void)
 		free(duplicate);
 	}
 
-	printf("<<<__\033[36mft_substr\033[0m__>>> ");
-	char *original = "hello, world!";
-	char *substring = ft_substr(original, 5, 3);
+/* _____FUNCIONES ADICIONALES_____ */
 
+/* ft_substr */
+
+	printf("<<<__\033[36mft_substr\033[0m__>>> ");
+	char *original_2 = "hello, world!";
+	char *substring = ft_substr(original_2, 5, 3);
 	printf("Substring is: %s\n", substring);
+	
+	
+/* ft_strjoin */
+
+	printf("<<<__\033[36mft_strjoin\033[0m__>>>");
+
 
 	return (0);
 }
