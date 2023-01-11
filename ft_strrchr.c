@@ -31,21 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
-int	main (void)
-{
-	const char *str = "Hello, World!";
-	int c = 'l';
-
-	char *result = ft_strrchr(str, c);
-	if (result)
-	{
-		printf ("La última ocurrencia de '%c' en '%s' se encuentra en la posición %ld\n", c, str, result - str); 
-	}
-	else
-	{
-		printf("No se ha encontrado ninguna ocurrencia de '%c' en '%s'\n", c, str);
-	}
-	return (0);
-}
-*/

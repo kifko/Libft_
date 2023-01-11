@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:01:01 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/19 23:09:37 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/10 12:29:09 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,11 @@ int main (void)
 		free(duplicate);
 	}
 
+	printf("<<<__\033[36mft_substr\033[0m__>>> ");
+	char *original = "hello, world!";
+	char *substring = ft_substr(original, 5, 3);
+
+	printf("Substring is: %s\n", substring);
 
 	return (0);
 }
