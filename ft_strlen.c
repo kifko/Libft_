@@ -21,12 +21,4 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-/*
-int	main()
-{
-	char str[] = "Life is so 333good.";
-	int result = ft_strlen(str);
-	printf("The lenght of the string is %d.\n", result);
-  	return (0);	
-}
-*/
+

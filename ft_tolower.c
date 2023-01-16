@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 13:23:27 by festeve-          #+#    #+#             */
-/*   Updated: 2022/12/07 22:51:54 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/16 07:43:15 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-/*
-int	main()
-{
-	int i;
-
-	i = 'G';
-	printf("%c", ft_tolower(i));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:01:01 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/11 18:25:30 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/12 15:00:56 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,8 +148,8 @@ int main (void)
 	char str7[] = "Hola";
 	char str8[] = "Adios";
 	int n2 = 3;
-	int result = ft_strncmp(str6, str7, n2);
-	if(result == 0)
+	int result_1 = ft_strncmp(str6, str7, n2);
+	if(result_1 == 0)
 	{
 		printf("\u2705 Strings str6 and str7 are identical\n");
 	}
@@ -158,8 +158,8 @@ int main (void)
 		printf("\u274c Strings str6 and str7 are different\n");
 	}
 	printf("<<<__\033[36mft_strncmp\033[0m__>>> ");
-	result = ft_strncmp(str6, str8, n2);
-	if(result == 0)
+	result_1 = ft_strncmp(str6, str8, n2);
+	if(result_1 == 0)
 	{
 		printf("\u2705 Strings str6 and str8 are identical\n");
 	}
@@ -167,6 +167,19 @@ int main (void)
 	{
 		printf("\u274c Strings str6 and str8 are different\n");
 	}
+
+	/* ft_memchr */
+
+	printf("<<<__\033[36mft_memchr\033[0m___>>> \n");
+
+	/* ft_memcmp */
+	
+	printf("<<<__\033[36mft_memcmp\033[0m___>>> \n");
+	
+	/* ft_atoi */
+	
+	printf("<<<__\033[36mft_atoi\033[0m_____>>> ");
+	printf("%d\n", ft_atoi("-2147483649"));
 
 	/* ft_calloc */
 
@@ -178,41 +191,45 @@ int main (void)
 		printf("Falla la reserva de memoria\n");
 		return (1);
 	}
-	printf("thisisacallocoverwritentext\n");
+	printf("\u2705 thisisacallocoverwritentext\n");
 	free(array);
 
 	/* ft_strdup */
 
 	printf("<<<__\033[36mft_strdup\033[0m___>>> ");
-	const char *original = "Hello, world!";
-	char *duplicate = ft_strdup(original);
-	if(duplicate == NULL)
+	const char *original_1 = "Hello, world!";
+	char *duplicate_1 = ft_strdup(original_1);
+	if(duplicate_1 == NULL)
 	{
-		printf("Error: ft_strdup failed\n");
+		printf("\u274c Error: ft_strdup failed\n");
 		return (1);
 	}
 	else
 	{
-		printf("Original string: %s\n", original);
+		printf("\u2705 Original string: %s\n", original_1);
 		printf("<<<__\033[36mft_strdup\033[0m___>>> ");
-		printf("Duplicate string: %s\n", duplicate);
-		free(duplicate);
+		printf("\u2705 Duplicate string: %s\n", duplicate_1);
+		free(duplicate_1);
 	}
 
 /* _____FUNCIONES ADICIONALES_____ */
 
 /* ft_substr */
 
-	printf("<<<__\033[36mft_substr\033[0m__>>> ");
+	printf("<<<__\033[36mft_substr\033[0m___>>> ");
 	char *original_2 = "hello, world!";
 	char *substring = ft_substr(original_2, 5, 3);
-	printf("Substring is: %s\n", substring);
+	printf("\u2705 Substring is: %s\n", substring);
 	
 	
 /* ft_strjoin */
 
-	printf("<<<__\033[36mft_strjoin\033[0m__>>>");
-
+	printf("<<<__\033[36mft_strjoin\033[0m__>>> ");
+	char *s1 = "Hello, ";
+	char *s2 = "world!";
+	char *result_2 = ft_strjoin(s1, s2);
+	printf("\u2705 %s\n", result_2);
+	free(result_2);
 
 	return (0);
 }
