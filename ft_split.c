@@ -6,32 +6,31 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 09:30:27 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/16 18:33:14 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/18 11:59:32 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t sub_str_size(char const *str, char c)
+size_t	sub_str_size(char const *str, char c)
 {
-	size_t	i;
-	size_t	lenght;
+	size_t	len;
 
-	i = 0;
-	lenght = 0;
-	while (str[i])
+	len = 0;
+	while (*str)
 	{
-		if (str[i] != c)
-			lenght++;
-		while (str[i] && str[i] != c)
-			i++;
-		if (str[i])
-			i++;
+		if (*str != c)
+		{
+			len++;
+			while (*str != c && *str)
+				str++;
+		}
+		else
+			str++;
 	}
-	return (lenght);
+	return (len);
 }
 
-char *ft_sub_str(char const *s, char c, size_t j)
+char	*ft_sub_str(char const *s, char c, size_t j)
 {
 	size_t	i;
 	size_t	count;
@@ -59,7 +58,7 @@ char *ft_sub_str(char const *s, char c, size_t j)
 	return (str);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**bi_dim_array;
 	size_t	sub_str;
@@ -84,4 +83,3 @@ char **ft_split(char const *s, char c)
 	bi_dim_array[i] = NULL;
 	return (bi_dim_array);
 }
-

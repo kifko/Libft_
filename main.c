@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:01:01 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/12 15:00:56 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/18 11:59:42 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -230,6 +230,16 @@ int main (void)
 	char *result_2 = ft_strjoin(s1, s2);
 	printf("\u2705 %s\n", result_2);
 	free(result_2);
+
+/* ft_strtrim */
+
+/* ft_split */
+
+	printf("<<<__\033[36mft_split\033[0m____>>> ");
+	char *a = "asdq weer trty gfh";
+	char *result_3 = *ft_split(a, ' ');
+	printf("\u2705 Splited string is: %s\n", result_3);
+	free(result_3);
 
 	return (0);
 }
