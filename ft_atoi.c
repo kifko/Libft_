@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:47:46 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/12 14:54:45 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/18 18:35:12 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,3 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (final_nbr * sign);
 }
-/*
-int	main(int argc, char **argv)
-{
-	(void)argc;
-	printf("%d\n", ft_atoi(argv[1]));
-	return (0);
-}
-*/

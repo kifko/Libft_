@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:01:01 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/18 11:59:42 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/18 16:10:18 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,12 +233,22 @@ int main (void)
 
 /* ft_strtrim */
 
+	printf("<<<__\033[36mft_strtrim\033[0m__>>> ");
+	char *s3 = "___holamundo___";
+	char s4 = '_';
+	printf("\u2705 Trimmed string is: %s\n", ft_strtrim(s3, &s4));
+
 /* ft_split */
 
 	printf("<<<__\033[36mft_split\033[0m____>>> ");
 	char *a = "asdq weer trty gfh";
-	char *result_3 = *ft_split(a, ' ');
-	printf("\u2705 Splited string is: %s\n", result_3);
+	char **result_3 = ft_split(a, ' ');
+	int	i = 0;
+	while (result_3[i])
+	{
+		printf("\u2705 Splited string is: %s\n", result_3[i]);
+		i++;
+	}
 	free(result_3);
 
 	return (0);
