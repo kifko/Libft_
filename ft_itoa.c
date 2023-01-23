@@ -6,9 +6,11 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 17:54:09 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/18 18:35:01 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/20 13:11:23 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	num_len(int n)
 {

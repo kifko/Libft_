@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-size_t	sub_str_size(char const *str, char c)
+
+size_t	ft_sub_str_size(char const *str, char c)
 {
 	size_t	len;
 
@@ -61,19 +62,19 @@ char	*ft_sub_str(char const *s, char c, size_t j)
 char	**ft_split(char const *s, char c)
 {
 	char	**bi_dim_array;
-	size_t	sub_str;
+	size_t	sub_str_size;
 	size_t	i;
 
 	if (!s)
 		return (NULL);
-	sub_str = sub_str_size(s, c);
+	sub_str_size = ft_sub_str_size(s, c);
 	if (c == '\0' && ft_strlen(s) > 0)
-		sub_str = 1;
-	bi_dim_array = (char **)ft_calloc(sub_str + 1, sizeof(char *));
+		sub_str_size = 1;
+	bi_dim_array = (char **)ft_calloc(sub_str_size + 1, sizeof(char *));
 	if (bi_dim_array == NULL)
 		return (NULL);
 	i = 0;
-	while (i < sub_str)
+	while (i < sub_str_size)
 	{
 		bi_dim_array[i] = ft_sub_str(s, c, i);
 		if (bi_dim_array[i] == NULL)
