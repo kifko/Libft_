@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:01:01 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/23 16:20:33 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:35:38 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -259,5 +259,14 @@ int main (void)
 	int a2 = 1234;
 	printf("Result is: %s\n", ft_itoa(a2));
 
+/* ft_lstnew_bonus */
+
+	t_list *new_list;
+	
+	int a3 = 123;
+	new_list = (t_list *)malloc(sizeof(t_list));
+	new_list->content = a3;
+	new_list->next = NULL;
+	printf ("%d",(int)new_list->content);
 	return (0);
 }
