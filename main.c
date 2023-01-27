@@ -6,7 +6,7 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 19:01:01 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/24 13:35:38 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/27 12:20:11 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,18 @@ int main (void)
 	/* ft_memcmp */
 	
 	printf("<<<__\033[36mft_memcmp\033[0m___>>> \n");
-	
+
+	/* ft_strnstr */
+
+	printf("<<<__\033[36mft_strnstr\033[0m__>>> ");
+	const char *haystack = "Este es un ejemplo de haystack";
+	const char *needle = "ejemplo";
+	size_t len = 20;
+	char *res = ft_strnstr(haystack, needle, len);
+	printf("\u2705 La subcadena '%s' se encuentra en la posición: %d\n", needle, (int)res);
+	char *res2 = strnstr(haystack, needle, len);
+	printf("\u2705 La subcadena '%s' se encuentra en la posición: %d\n", needle, (int)res2);
+
 	/* ft_atoi */
 	
 	printf("<<<__\033[36mft_atoi\033[0m_____>>> ");
@@ -259,7 +270,7 @@ int main (void)
 	int a2 = 1234;
 	printf("Result is: %s\n", ft_itoa(a2));
 
-/* ft_lstnew_bonus */
+/* ft_lstnew_bonus
 
 	t_list *new_list;
 	
@@ -268,5 +279,7 @@ int main (void)
 	new_list->content = a3;
 	new_list->next = NULL;
 	printf ("%d",(int)new_list->content);
+*/
+
 	return (0);
 }
