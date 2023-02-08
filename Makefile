@@ -6,7 +6,7 @@
 #    By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/02 17:21:54 by festeve-          #+#    #+#              #
-#    Updated: 2023/01/25 11:01:18 by festeve-         ###   ########.fr        #
+#    Updated: 2023/02/07 09:42:08 by festeve-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all:	$(NAME)
 $(OBJ):	%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_BONUS): %.o :%.c
+$(OBJ_BONUS): %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
@@ -59,10 +59,14 @@ clean:
 	$(RM) $(OBJ)
 	@echo "clean done"
 
+clean_bonus:
+	$(RM) $(OBJ_BONUS)
+	@echo "clean_bonus done"
+
 fclean:	clean
 	$(RM)  $(NAME)
 	@echo "fclean done"
 
 re:	fclean $(NAME)
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus clean_bonus

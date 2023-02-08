@@ -18,3 +18,12 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
+
+/*
+int main (void)
+{
+	printf("<<<__\033[36mft_tolower\033[0m__>>> ");
+	printf("\u2705 The result is: %c\n", ft_tolower('E'));
+	return (0);
+}
+*/

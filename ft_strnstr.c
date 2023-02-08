@@ -6,35 +6,28 @@
 /*   By: festeve- <festeve-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:37:54 by festeve-          #+#    #+#             */
-/*   Updated: 2023/01/27 12:44:34 by festeve-         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:46:34 by festeve-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	size_t	needle_len;
+// ##############################################################################
+// DESCRIPTION: 
+// The strnstr() function locates the first occurrence of the 
+// null-terminated string needle in the string haystack, 
+// where not more than len characters are searched.  
+// Characters that appear after a '' character are not searched.
+// Since the strnstr() function is a FreeBSD specific API,
+// it should only be used when portability is not a concern.
+// ##############################################################################
+// RETURN VALUE:
+// If needle is an empty string, haystack is returned; 
+// if needle occurs nowhere in haystack, NULL is returned; 
+// otherwise a pointer to the first character of the first occurrence of needle 
+// is returned.
+// ##############################################################################
 
-	needle_len = ft_strlen(needle);
-	if (needle_len == 0)
-		return (char *)haystack;
-	if (len < needle_len)
-		return (NULL);
-	while (len >= needle_len)
-	{
-		if (ft_strncmp(haystack, needle, needle_len) == 0)
-			return ((char *)haystack);
-		haystack++;
-		len--;
-	}
-	return (NULL);
-}
-
-
-/*
-
-V 1.0
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
@@ -58,31 +51,17 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-V 0.0
+/*
+int main (void)
 {
-	unsigned int	i;
-	unsigned int	j;
-	char			*hs;
-	char			*n;
-
-	i = 0;
-	j = 0;
-	hs = (char *)haystack;
-	n = (char *)needle;
-	if (n[i] == '\0')
-		return (hs);
-	while (hs[i] != '\0' && i < len)
-	{
-		while (hs[i + j] == n[j] && (i + j) < len)
-		{
-			if (n[j + 1] == '\0')
-				return (&hs[i]);
-			j++;
-		}
-		j = 0;
-		i++;
-	}
-	return (NULL);
+	printf("<<<__\033[36mft_strnstr\033[0m__>>> ");
+	const char *haystack = "Este es un ejemplo de haystack";
+	const char *needle = "ejemplo";
+	size_t len = 20;
+	char *res = ft_strnstr(haystack, needle, len);
+	printf("\u2705 La subcadena '%s' se encuentra en la posición: %d\n", needle, (int)res);
+	char *res2 = strnstr(haystack, needle, len);
+	printf("\u2705 La subcadena '%s' se encuentra en la posición: %d\n", needle, (int)res2);
+	return (0);
 }
 */

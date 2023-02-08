@@ -12,13 +12,23 @@
 
 #include "libft.h"
 
+// ##############################################################################
+// DESCRIPTION: A cada carácter de la string ’s’, aplica la
+// función ’f’ dando como parámetros el índice de cada
+// carácter dentro de ’s’ y el propio carácter. 
+// Genera una nueva string con el resultado del uso sucesivo de ’f’.
+// ##############################################################################
+// RETURN VALUE: La string creada tras el correcto uso de ’f’ sobre cada carácter.
+// NULL si falla la reserva de memoria.
+// ##############################################################################
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*str;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)

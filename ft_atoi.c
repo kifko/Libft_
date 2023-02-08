@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+// ##############################################################################
+// DESCRIPTION: 
+// Converts the initial portion of the string pointed to by str to int representation.
+// ##############################################################################
+
 int	ft_atoi(const char *str)
 {
 	int					i;
@@ -40,3 +45,14 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (final_nbr * sign);
 }
+
+/*
+int main (void)
+{
+	printf("<<<__\033[36mft_atoi\033[0m_____>>> ");
+	printf("%d\n", ft_atoi("2147483651"));
+	printf("<<<__\033[36matoi\033[0m_____>>> ");
+	printf("%d\n", atoi("2147483651"));
+	return (0);
+}
+*/

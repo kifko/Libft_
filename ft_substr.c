@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+// ##############################################################################
+// DESCRIPTION:
+// Returns the substring of the given string at the given start position 
+// with the given length (or smaller if the length of the original string 
+// is less than start + length, or length is bigger than MAXSTRINGLEN).
+// ##############################################################################
+// RETURN VALUE: Returns a substring
+// ##############################################################################
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
@@ -39,3 +48,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[len] = '\0';
 	return (res);
 }
+
+/*
+int main (void)
+{
+	printf("<<<__\033[36mft_substr\033[0m___>>> ");
+	char *original_2 = "hello, world!";
+	char *substring = ft_substr(original_2, 5, 3);
+	printf("\u2705 Substring is: %s\n", substring);
+	return (0);
+}
+*/

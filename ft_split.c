@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+// ##############################################################################
+// DESCRIPTION: Reserva (utilizando malloc(3)) un array de strings
+// resultante de separar la string ’s’ en substrings
+// utilizando el caracter ’c’ como delimitador. 
+// El array debe terminar con un puntero NULL.
+// ##############################################################################
+// RETURN VALUE: El array de nuevas strings resulatente de la separación.
+// NULL si falla la reserva de memoria.
+// #############################################################################
+
 size_t	ft_sub_str_size(char const *str, char c)
 {
 	size_t	len;
@@ -84,3 +94,20 @@ char	**ft_split(char const *s, char c)
 	bi_dim_array[i] = NULL;
 	return (bi_dim_array);
 }
+
+/*
+int main (void)
+{
+	printf("<<<__\033[36mft_split\033[0m____>>> ");
+	char *a = "asdq weer trty gfh";
+	char **result_3 = ft_split(a, ' ');
+	int	i = 0;
+	while (result_3[i])
+	{
+		printf("\u2705 Splited string is: %s\n", result_3[i]);
+		i++;
+	}
+	free(result_3);
+	return (0);
+}
+*/

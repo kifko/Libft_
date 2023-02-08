@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+// ##############################################################################
+// DESCRIPTION:
+// Elimina todos los caracteres de la string ’set’
+// desde el principio y desde el final de ’s1’, hasta
+// encontrar un caracter no perteneciente a ’set’. La
+// string resultante se devuelve con una reserva de malloc(3)
+// ##############################################################################
+// RETURN VALUE: La string recortada. NULL si falla la reserva de memoria.
+// ##############################################################################
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	s1_size;
@@ -27,3 +37,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr((char *)s1, 0, s1_size + 1));
 }
 
+/*
+int main (void)
+{
+	printf("<<<__\033[36mft_strtrim\033[0m__>>> ");
+	char *s3 = "___holamundo___";
+	char s4 = '_';
+	printf("\u2705 Trimmed string is: %s\n", ft_strtrim(s3, &s4));
+	return (0);
+}
+*/

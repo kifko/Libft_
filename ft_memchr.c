@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+// ##############################################################################
+// DESCRIPTION:
+// Locates the first occurrence of c (converted to an unsigned char) in string s.
+// ##############################################################################
+// RETURN VALUES: 
+// Returns a pointer to the byte located, 
+// or NULL if no such byte exists within n bytes.
+// ##############################################################################
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
@@ -29,3 +38,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*
+int main (void)
+{
+	printf("<<<__\033[36mft_memchr\033[0m___>>> \n");
+	return (0);
+}
+*/

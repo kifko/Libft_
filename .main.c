@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+int main (void)
+{
+
+	return (0);
+}
+*/
+
 int main (void)
 {
 	/* ft_isalpha */
@@ -26,32 +34,38 @@ int main (void)
 	printf("<<<__\033[36mft_isdigit\033[0m__>>> ");
 	printf("\u2705 My function: Its digit! %d\n", ft_isdigit('4'));
 //	printf("\u2705 Original one: Its digit! %d\n", isdigit('4'))
+
 	/* ft_isalnum */
 
 	printf("<<<__\033[36mft_isalnum\033[0m__>>> ");
 	printf("\u2705 My function: Its alphanumeric! %d\n", ft_isalnum('h'));
 //	printf("\u2705 Original one: Its alphanumeric! %d\n", isalnum('h'));
+
 	/* ft_isascii */
 
 	printf("<<<__\033[36mft_isascii\033[0m__>>> ");
 	printf("\u2705 My function: Its ascii! %d\n", ft_isascii('f'));
 //	printf("\u2705 Original one: Its ascii! %d\n", isascii('f'));
+
 	/* ft_isprint */
 
 	printf("<<<__\033[36mft_isprint\033[0m__>>> ");
 	printf("\u2705 My function: Its printable! %d\n", ft_isprint('j'));
 //	printf("\u2705 Original one: Its printable! %d\n", isprint('j'));
+
 	/* ft_strlen */
 
 	printf("<<<__\033[36mft_strlen\033[0m___>>> ");
 	printf("\u2705 \033[35mMy function: The lenght of the string is:\033[0m %zu\n", ft_strlen("abcdefgh"));
 //	printf("\u2705 \033[35mOriginal one: The lenght of the string is:\033[0m %zu\n", strlen("abcdefgh"));
+
 	/* ft_memset */
 
 	printf("<<<__\033[36mft_memset\033[0m___>>> ");
 	char str1[84] = "ahoraquevamosdespacio";
 	printf("\u2705 My function: The result is: %p\n", ft_memset(str1, '.', 8));
 //	printf("\u2705 Original one: The result is: %p\n", memset(str1, '.', 8));
+
 	/* ft_bzero */
 
 	printf("<<<__\033[36mft_bzero\033[0m____>>> ");
