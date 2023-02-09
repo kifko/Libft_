@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Utilizando malloc(3), genera una string que
 // represente el valor entero recibido como argumento.
@@ -23,6 +24,7 @@
 // RETURN VALUE: La string que represente el número.
 // NULL si falla la reserva de memoria.
 // ##############################################################################
+*/
 
 size_t	num_len(int n)
 {

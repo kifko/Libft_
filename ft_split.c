@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Reserva (utilizando malloc(3)) un array de strings
 // resultante de separar la string ’s’ en substrings
@@ -21,6 +22,7 @@
 // RETURN VALUE: El array de nuevas strings resulatente de la separación.
 // NULL si falla la reserva de memoria.
 // #############################################################################
+*/
 
 size_t	ft_sub_str_size(char const *str, char c)
 {
@@ -71,24 +73,27 @@ char	*ft_sub_str(char const *s, char c, size_t j)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**bi_dim_array;
-	size_t	sub_str_size;
 	size_t	i;
+	size_t	sub_str_size;
+	char	**bi_dim_array;
 
-	if (!s)
-		return (NULL);
+	i = 0;
 	sub_str_size = ft_sub_str_size(s, c);
+	bi_dim_array = (char **)ft_calloc(sub_str_size + 1, sizeof(char *));
+	if (!s || !bi_dim_array)
+		return (NULL);
 	if (c == '\0' && ft_strlen(s) > 0)
 		sub_str_size = 1;
-	bi_dim_array = (char **)ft_calloc(sub_str_size + 1, sizeof(char *));
-	if (bi_dim_array == NULL)
-		return (NULL);
-	i = 0;
 	while (i < sub_str_size)
 	{
 		bi_dim_array[i] = ft_sub_str(s, c, i);
-		if (bi_dim_array[i] == NULL)
+		if (!bi_dim_array[i])
+		{
+			while (i--)
+				free (bi_dim_array[i]);
+			free (bi_dim_array);
 			return (NULL);
+		}
 		i++;
 	}
 	bi_dim_array[i] = NULL;

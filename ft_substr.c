@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION:
 // Returns the substring of the given string at the given start position 
@@ -20,6 +21,7 @@
 // ##############################################################################
 // RETURN VALUE: Returns a substring
 // ##############################################################################
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

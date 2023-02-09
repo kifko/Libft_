@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-// ##############################################################################
+/*
 // DESCRIPTION: 
 // The strchr() function returns a pointer to the FIRST occurrence 
 // of the character c (converted to a char) in the string s.
@@ -23,7 +23,7 @@
 // RETURN VALUE: 
 // The strchr() function returns a pointer to the located character or NULL 
 // if the character does not appear in the string.
-// ##############################################################################
+*/
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -45,7 +45,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/* 
+/*
 int main (void)
 {
 	printf("<<<__\033[36mft_strchr\033[0m___>>> ");
@@ -54,7 +54,8 @@ int main (void)
 	char *ptr = ft_strchr(str4, ch);
 	if(ptr != NULL) 
 	{
-		printf("\u2705 It was found the character '%c' at the position %d from string '%s'\n", ch, (int)(ptr - str4), str4);
+		printf("\u2705 It was found the character '%c' \
+		at the position %d from string '%s'\n", ch, (int)(ptr - str4), str4);
 	}
 	else
 	{

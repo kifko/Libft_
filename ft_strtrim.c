@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-// ##############################################################################
-// DESCRIPTION:
-// Elimina todos los caracteres de la string ’set’
-// desde el principio y desde el final de ’s1’, hasta
-// encontrar un caracter no perteneciente a ’set’. La
-// string resultante se devuelve con una reserva de malloc(3)
-// ##############################################################################
-// RETURN VALUE: La string recortada. NULL si falla la reserva de memoria.
-// ##############################################################################
+/*
+DESCRIPTION:
+Elimina todos los caracteres de la string ’set’
+desde el principio y desde el final de ’s1’, hasta
+encontrar un caracter no perteneciente a ’set’. La
+string resultante se devuelve con una reserva de malloc(3)
+
+RETURN VALUE: La string recortada. NULL si falla la reserva de memoria.
+*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

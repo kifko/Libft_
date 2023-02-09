@@ -12,16 +12,21 @@
 
 #include "libft.h"
 
-//	Description:
-//	str_join concatenates all the strings/character arrays passed to it. If
-//	'delim' is not NULL then after every string, the 'delim' string is concatenated.
-//	It allocates a new character array whose size is equal to the sum of the
-//	lengths of all strings passed to it plus 1 (extra 1 for terminating null byte).
-//	It then concatenates all the strings passed to it separated by 'delim' string
-//	into the newly allocated character array and then returns the pointer to
-//	the newly allocated character array. If memory allocation fails then NULL is returned.
-//
-//	It is the responsibility of the caller to free the allocated memory.
+/*
+Description:
+str_join concatenates all the strings/character arrays passed to it.
+If 'delim' is not NULL then after every string,
+the 'delim' string is concatenated.
+It allocates a new character array whose size is equal to the sum of the
+lengths of all strings passed to it plus 1 (extra 1
+for terminating null byte).
+It then concatenates all the strings passed to it 
+separated by 'delim' string into the newly allocated character array
+and then returns the pointer to the newly allocated character array.
+If memory allocation fails then NULL is returned.
+
+It is the responsibility of the caller to free the allocated memory.
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Toma como parámetro un nodo ’lst’ y libera la
 // memoria del contenido utilizando la función ’del’
@@ -20,6 +21,7 @@
 // ##############################################################################
 // RETURN VALUE: Nada
 // ##############################################################################
+*/
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

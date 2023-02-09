@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Compares byte string s1 against byte string s2.  
 // Both strings are assumed to be n bytes long.
@@ -23,6 +24,7 @@
 // This behavior is not required by C and portable code should only depend 
 // on the sign of the returned value.
 // ##############################################################################
+*/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

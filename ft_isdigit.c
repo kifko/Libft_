@@ -12,18 +12,18 @@
 
 #include "libft.h"
 
-// ##############################################################################
-// DESCRIPTION:
-// The isdigit() function tests for a decimal digit character.
-// The isnumber() function behaves similarly to isdigit(), 
-// but may recognize additional characters, depending on the current locale setting.
-// The value of the argument must be representable as an unsigned char 
-// or the value of EOF.
-// ##############################################################################
-// RETURN VALUE:
-//  The isdigit() and isnumber() functions return zero if the character tests 
-// false and return non-zero if the character tests true.
-// ##############################################################################
+/*
+DESCRIPTION:
+The isdigit() function tests for a decimal digit character.
+The isnumber() function behaves similarly to isdigit(), 
+but may recognize additional characters, depending on the current locale setting.
+The value of the argument must be representable as an unsigned char 
+or the value of EOF.
+
+RETURN VALUE:
+ The isdigit() and isnumber() functions return zero if the character tests 
+false and return non-zero if the character tests true.
+*/
 
 int	ft_isdigit(int c)
 {

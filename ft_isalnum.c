@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION:
 // The isalnum() function tests for any character for which isalpha(3) or 
@@ -23,6 +24,7 @@
 // The isalnum() function returns zero if the character tests false and 
 // returns non-zero if the character tests true.
 // ##############################################################################
+*/
 
 int	ft_isalnum(int c)
 {

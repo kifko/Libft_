@@ -12,12 +12,14 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Fills the first n bytes of the memory area pointed to by s 
 // with the constant byte c, converted to unsigned.
 // ##############################################################################
 // RETURN VALUE: Returns a pointer to the memory area s.
 // ##############################################################################
+*/
 
 void	*ft_memset(void *s, int c, size_t n)
 {

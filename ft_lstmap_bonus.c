@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Itera la lista ’lst’ y aplica la función ’f’ al
 // contenido de cada nodo. Crea una lista resultante
@@ -23,19 +24,28 @@
 // RETURN VALUE: La nueva lista.
 // NULL si falla la reserva de memoria.
 // ##############################################################################
+*/
 
 t_list	*ft_lstmap(t_list *lst, void*(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_elem;
+	void	*new_content;
 
 	new_lst = NULL;
 	while (lst)
 	{
-		new_elem = ft_lstnew(f(lst->content));
+		new_content = f(lst->content);
+		if (!new_content)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		new_elem = ft_lstnew(new_content);
 		if (!(new_elem))
 		{
 			ft_lstclear(&new_lst, del);
+			del(new_content);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_lst, new_elem);

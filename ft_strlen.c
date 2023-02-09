@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-// ##############################################################################
-// DESCRIPTION: Computes the length of the string s.  
-// ##############################################################################
-// RETURN VALUE: Returns the number of characters 
-// that precede the terminating NUL character.
-// ##############################################################################
+/*
+DESCRIPTION: Computes the length of the string s.
+
+RETURN VALUE: Returns the number of characters
+that precede the terminating NUL character.
+*/
 
 size_t	ft_strlen(const char *s)
 {
@@ -28,12 +28,15 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
 /*
 int main (void)
 {
 printf("<<<__\033[36mft_strlen\033[0m___>>> ");
-	printf("\u2705 \033[35mMy function: The lenght of the string is:\033[0m %zu\n", ft_strlen("abcdefgh"));
-//	printf("\u2705 \033[35mOriginal one: The lenght of the string is:\033[0m %zu\n", strlen("abcdefgh"));
+	printf("\u2705 \033[35mMy function: The lenght of the string \
+		is:\033[0m %zu\n", ft_strlen("abcdefgh"));
+//	printf("\u2705 \033[35mOriginal one: The lenght of the string \
+//		is:\033[0m %zu\n", strlen("abcdefgh"));
 	return (0);
 }
 */

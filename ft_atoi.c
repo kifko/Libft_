@@ -12,10 +12,35 @@
 
 #include "libft.h"
 
-// ##############################################################################
-// DESCRIPTION: 
-// Converts the initial portion of the string pointed to by str to int representation.
-// ##############################################################################
+/*
+DESCRIPTION: 
+Converts the initial portion of the string 
+pointed to by str to int representation.
+
+'\n' matches linefeed.
+'\v' matches vertical tab.
+'\f' matches form-feed.
+'\r' matches carriage return.
+'\t' matches horizontal tab.
+##extra
+'\0' matches NULL character.
+'\b' matches backspace.
+##combos
+'\s' matches whitespace (short for \
+	[\f\n\r\t\v\u00A0\u2028\u2029]).
+'\S' matches everything but a whitespace (short for \
+	[^\f\n\r\t\v\u00A0\u2028\u2029]).
+'\w' matches any alphanumerical character (word characters).
+	including underscore (short for [a-zA-Z0-9_]).
+'\d' matches any digit (short for [0-9]).
+'\D' matches any non-digit (short for [^0-9]).
+'\b' matches a word boundary (the position between a word and a space).
+'\B' matches a non-word boundary (short for [^\b]).
+'\cX' matches a control character. E.g: \cm matches control-M.
+'\xhh' matches the character with two characters of hexadecimal code hh.
+'\uhhhh' matches the Unicode character with \
+	four characters of hexadecimal coe hhhh.
+*/
 
 int	ft_atoi(const char *str)
 {

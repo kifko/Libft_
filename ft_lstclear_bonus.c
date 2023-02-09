@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Elimina y libera el nodo ’lst’ dado y todos los
 // consecutivos de ese nodo, utilizando la función
@@ -20,6 +21,7 @@
 // ##############################################################################
 // RETURN VALUE: Nada
 // ##############################################################################
+*/
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

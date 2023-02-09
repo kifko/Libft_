@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-// ##############################################################################
-// DESCRIPTION: The strrchr() function returns a pointer to the LAST occurrence 
-// of the character c in the string s.
-// The terminating NUL character is considered part of the string. 
-// If c is ‘\0’, strchr() locates the terminating ‘\0’.
-// The rindex() function is an old synonym for strrchr().
-// ##############################################################################
-// RETURN VALUE: The strrchr() functions return a pointer to the 
-// matched character or NULL if the character is not found.  
-// ##############################################################################
+/*
+DESCRIPTION: The strrchr() function returns a pointer to the
+LAST occurrence of the character c in the string s.
+The terminating NUL character is considered part of the string.
+If c is ‘\0’, strchr() locates the terminating ‘\0’.
+The rindex() function is an old synonym for strrchr().
+
+RETURN VALUE: The strrchr() functions return a pointer to
+the matched character or NULL if the character is not found.
+*/
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -42,6 +42,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
 /*
 int main (void)
 {
@@ -51,7 +52,8 @@ int main (void)
 	char *ptr2 = ft_strrchr(str5, ch2);
 	if(ptr2 != NULL)
 	{
-		printf("\u2705 It was found the character '%c' at the position %d from string '%s'\n", ch2, (int)(ptr2 - str5), str5);
+		printf("\u2705 It was found the character '%c' at the position \
+			%d from string '%s'\n", ch2, (int)(ptr2 - str5), str5);
 	}
 	else
 	{

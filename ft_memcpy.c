@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*
 // ##############################################################################
 // DESCRIPTION: Copies n bytes from memory area src to memory area dst.
 // If dst and src overlap, behavior is undefined.  
@@ -19,6 +20,7 @@
 // ##############################################################################
 // RETURN VALUE: The memcpy() function returns a pointer to dest.
 // ##############################################################################
+*/
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
