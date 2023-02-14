@@ -26,22 +26,22 @@ void	ft_bzero(void *s, size_t n)
 		i[n] = '\0';
 }
 
-/*
+/* 
 int main (void)
 {
 	printf("<<<__\033[36mft_bzero\033[0m____>>> ");
 	char	str2[25] = "vamosacontarmentiras";
 	size_t	len = strlen(str2);
-	printf("\u2705 Before ft_bzero: %s\n", str2);
+	printf("\u27AB Before ft_bzero: %s\n", str2);
 	printf("<<<__\033[36mbzero\033[0m_______>>> ");
-	printf("\u2705 before bzero: %s\n", str2);
+	printf("\uFE34 before bzero: %s\n", str2);
 	ft_bzero(str2, len);
 	printf("<<<__\033[36mft_bzero\033[0m____>>> ");
-	printf("\u2705 After ft_bzero: %s\n", str2);
+	printf("\u260E After ft_bzero: %s\n", str2);
 	bzero(str2, len);
 	printf("<<<__\033[36mbzero\033[0m_______>>> ");
-	printf("\u2705 After bzero: %s\n", str2);
+	printf("\u2752 After bzero: %s\n", str2);
 
 	return (0);
 }
-*/
+ */

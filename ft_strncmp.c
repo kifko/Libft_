@@ -27,19 +27,6 @@ so that `\200' is greater than `\0'.
 */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
-/*
-{
-	int i;
-
-	i = 0;
-	while (s1[i] != 0 && s2[i] != 0 && s1[i] == s2[i] && (size_t)i < n)
-	{
-		i++;
-	}
-	return (s1[1] - s2[i]);
-
-}
-*/
 {
 	unsigned char	*str1;
 	unsigned char	*str2;
@@ -86,5 +73,20 @@ int main (void)
 		printf("\u274c Strings str6 and str8 are different\n");
 	}
 	return (0);
+}
+*/
+
+/*
+Ternario prohibido
+{
+	int i;
+
+	i = 0;
+	while (s1[i] != 0 && s2[i] != 0 && s1[i] == s2[i] && (size_t)i < n)
+	{
+		i++;
+	}
+	return (s1[1] - s2[i]);
+
 }
 */
